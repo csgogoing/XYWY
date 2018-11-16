@@ -37,6 +37,7 @@ class Im_Test():
 			result, order_id = self.my_ask.other_page(resource_id=source, uid=user_id, q_type=q_type, doctor_ids=did, pay_type=1, content = content)
 			if result == False:
 				return
+			sleep(1)
 			if q_type == 3:
 				qid = int(self.my_ask.get_id(user_id, zd=1, did=did))
 			else:
@@ -159,6 +160,7 @@ if __name__ == '__main__':
 									break
 
 								my_ask.other_page(source, uid=456654, q_type=m_q_type, doctor_ids=doctor_id, pay_type=1)
+								sleep(1)
 								qid = my_ask.get_id(456654)
 								print('本次提问的qid为%d'%qid)
 
