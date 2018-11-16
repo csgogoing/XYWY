@@ -1,0 +1,67 @@
+Test_appnium	Find_doctor.py	/^from auto_appnium import Test_appnium$/;"	i
+__init__	Find_doctor.py	/^	def __init__(self):$/;"	m	class:find_doctor
+actions	Find_doctor.py	/^	def actions(self, choose):$/;"	m	class:find_doctor
+find_doctor	Find_doctor.py	/^class find_doctor(Test_appnium):$/;"	c
+random	Find_doctor.py	/^import random$/;"	i
+time	Find_doctor.py	/^import time$/;"	i
+Auto_pay	Quick_ask.py	/^	def Auto_pay(self, id):$/;"	m	class:quick_ask
+Test_appnium	Quick_ask.py	/^from auto_appnium import Test_appnium$/;"	i
+__init__	Quick_ask.py	/^	def __init__(self):$/;"	m	class:quick_ask
+actions	Quick_ask.py	/^	def actions(self, choose):$/;"	m	class:quick_ask
+quick_ask	Quick_ask.py	/^class quick_ask(Test_appnium):$/;"	c
+random	Quick_ask.py	/^import random$/;"	i
+time	Quick_ask.py	/^import time$/;"	i
+Test_appnium	auto_appnium.py	/^class Test_appnium:$/;"	c
+__init__	auto_appnium.py	/^	def __init__(self):$/;"	m	class:Test_appnium
+fid	auto_appnium.py	/^	def fid(self, id):$/;"	m	class:Test_appnium
+fids	auto_appnium.py	/^	def fids(self, id):$/;"	m	class:Test_appnium
+getSize	auto_appnium.py	/^	def getSize(self):$/;"	m	class:Test_appnium
+is_success	auto_appnium.py	/^	def is_success(self):$/;"	m	class:Test_appnium
+mquit	auto_appnium.py	/^	def mquit(self):$/;"	m	class:Test_appnium
+os	auto_appnium.py	/^import os$/;"	i
+re	auto_appnium.py	/^import re$/;"	i
+swipLeft	auto_appnium.py	/^	def swipLeft(self, t):$/;"	m	class:Test_appnium
+swipRight	auto_appnium.py	/^	def swipRight(self, t):$/;"	m	class:Test_appnium
+swipeDown	auto_appnium.py	/^	def swipeDown(self, t):$/;"	m	class:Test_appnium
+swipeUp	auto_appnium.py	/^	def swipeUp(self, t):$/;"	m	class:Test_appnium
+sys	auto_appnium.py	/^import sys$/;"	i
+time	auto_appnium.py	/^import time$/;"	i
+webdriver	auto_appnium.py	/^from appium import webdriver$/;"	i
+Init_open	base.py	/^class Init_open(object):$/;"	c
+Load_button	base.py	/^	def Load_button(self):$/;"	m	class:Init_open
+__init__	base.py	/^	def __init__(self):$/;"	m	class:Init_open
+close	base.py	/^	def close(self):$/;"	m	class:Init_open
+find_element	base.py	/^	def find_element(self, *loc):$/;"	m	class:Init_open
+find_elements	base.py	/^	def find_elements(self, *loc):$/;"	m	class:Init_open
+quit	base.py	/^	def quit(self):$/;"	m	class:Init_open
+webdriver	base.py	/^from selenium import webdriver$/;"	i
+Actions	doctor.py	/^	def Actions(self, mtype):$/;"	m	class:Im_doctor
+Im_doctor	doctor.py	/^class Im_doctor(Init_open):$/;"	c
+Init_open	doctor.py	/^from base import Init_open$/;"	i
+Load_button	doctor.py	/^	def Load_button(self):$/;"	m	class:Im_doctor
+__int__	doctor.py	/^	def __int__(self):$/;"	m	class:Im_doctor	file:
+doctor	doctor.py	/^	doctor = Im_doctor('http:\/\/test.dr.xywy.com\/site\/login')$/;"	v	class:Im_doctor
+sleep	doctor.py	/^from time import sleep$/;"	i
+Actions	im_id.py	/^	def Actions(self):$/;"	m	class:Im_id
+Im_id	im_id.py	/^class Im_id(Init_open):$/;"	c
+Init_open	im_id.py	/^from base import Init_open$/;"	i
+Load_button	im_id.py	/^	def Load_button(self):$/;"	m	class:Im_id
+__int__	im_id.py	/^	def __int__(self):$/;"	m	class:Im_id	file:
+doctor	im_id.py	/^	doctor = Im_id('http:\/\/test.admin.d.xywy.com\/question\/default\/index')$/;"	v	class:Im_id
+sleep	im_id.py	/^from time import sleep$/;"	i
+urllib	im_id.py	/^import urllib$/;"	i
+Im_doctor	start.py	/^from doctor import Im_doctor$/;"	i
+Im_id	start.py	/^from im_id import Im_id$/;"	i
+doctor	start.py	/^								doctor = Im_doctor('http:\/\/test.dr.xywy.com\/site\/login')$/;"	v
+find_doctor	start.py	/^from Find_doctor import find_doctor$/;"	i
+m_id	start.py	/^								m_id = Im_id('http:\/\/test.admin.d.xywy.com\/question\/default\/index')$/;"	v
+myphone	start.py	/^				myphone = quick_ask()$/;"	v
+quick_ask	start.py	/^from Quick_ask import quick_ask$/;"	i
+sys	start.py	/^import sys$/;"	i
+urllib	start.py	/^import urllib$/;"	i
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/

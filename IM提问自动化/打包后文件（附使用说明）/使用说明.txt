@@ -1,0 +1,4 @@
+1.请安装最新版本Firefox或最新版本Chrome浏览器
+2.绑定测试线环境
+3.保证目录下存在start.exe，geckodriver.exe，chromedriver.exe三个文件
+4.运行start.exe

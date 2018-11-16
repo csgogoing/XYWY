@@ -1,0 +1,116 @@
+1536652797443	geckodriver	INFO	geckodriver 0.20.1
+1536652797593	geckodriver	INFO	Listening on 127.0.0.1:57989
+1536652798026	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.IaUNCmoHaswR"
+1536652808155	Marionette	INFO	Listening on port 57995
+1536652808467	Marionette	WARN	TLS certificate errors will be ignored for this session
+1536652808537	Marionette	DEBUG	[6442450945] Frame script loaded
+1536652808847	Marionette	DEBUG	[6442450945] Frame script registered
+1536652809570	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1536652810716	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1536652814571	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://test.admin.d.xywy.com/admin/user/login
+1536652814633	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://test.admin.d.xywy.com/admin/user/login
+1536652815272	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://test.admin.d.xywy.com/admin/user/login
+1536652816872	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://test.admin.d.xywy.com/admin/user/login
+1536652816875	Marionette	DEBUG	[6442450945] Received DOM event unload for http://test.admin.d.xywy.com/admin/user/login
+1536652817160	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://test.admin.d.xywy.com/question/default/index
+1536652817339	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://test.admin.d.xywy.com/question/default/index
+1536652819464	Marionette	DEBUG	[6442450950] Frame script loaded
+1536652819478	Marionette	DEBUG	[6442450950] Frame script registered
+1536652819528	Marionette	DEBUG	[6442450953] Frame script loaded
+1536652819540	Marionette	DEBUG	[6442450953] Frame script registered
+1536652820698	Marionette	INFO	Stopped listening on port 57995
+[Child 2764, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2764, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5476, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5476, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6108, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1536652822620	geckodriver	INFO	geckodriver 0.20.1
+1536652822627	geckodriver	INFO	Listening on 127.0.0.1:58108
+1536652823167	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.HA7hDPdNOdw7"
+1536652826597	Marionette	INFO	Listening on port 58114
+1536652826993	Marionette	WARN	TLS certificate errors will be ignored for this session
+1536652827036	Marionette	DEBUG	[6442450945] Frame script loaded
+1536652827040	Marionette	DEBUG	[6442450945] Frame script registered
+1536652827062	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1536652827194	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1536652827540	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://test.dr.xywy.com/site/login
+1536652827646	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://test.dr.xywy.com/site/login
+1536652827978	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://test.dr.xywy.com/site/login
+1536652828689	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://test.dr.xywy.com/site/login
+1536652828690	Marionette	DEBUG	[6442450945] Received DOM event unload for http://test.dr.xywy.com/site/login
+1536652829277	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://test.dr.xywy.com/
+1536652829402	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://test.dr.xywy.com/
+[Child 5480, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5536, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5536, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1536652833623	Marionette	INFO	Stopped listening on port 58114
+1536652931453	geckodriver	INFO	geckodriver 0.20.1
+1536652931468	geckodriver	INFO	Listening on 127.0.0.1:58569
+1536652931967	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.TnwEgmfkmYy0"
+1536652935540	Marionette	INFO	Listening on port 58575
+1536652935782	Marionette	WARN	TLS certificate errors will be ignored for this session
+1536652935843	Marionette	DEBUG	[6442450945] Frame script loaded
+1536652935859	Marionette	DEBUG	[6442450945] Frame script registered
+1536652935903	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1536652936540	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1536652936964	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://test.admin.d.xywy.com/admin/user/login
+1536652937411	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://test.admin.d.xywy.com/admin/user/login
+1536652937906	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://test.admin.d.xywy.com/admin/user/login
+1536652939417	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://test.admin.d.xywy.com/admin/user/login
+1536652939420	Marionette	DEBUG	[6442450945] Received DOM event unload for http://test.admin.d.xywy.com/admin/user/login
+1536652939687	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://test.admin.d.xywy.com/question/default/index
+1536652940046	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://test.admin.d.xywy.com/question/default/index
+1536652942114	Marionette	DEBUG	[6442450950] Frame script loaded
+1536652942148	Marionette	DEBUG	[6442450950] Frame script registered
+1536652942190	Marionette	DEBUG	[6442450953] Frame script loaded
+1536652942194	Marionette	DEBUG	[6442450953] Frame script registered
+1536652942928	Marionette	INFO	Stopped listening on port 58575
+[Child 5568, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5568, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3544, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3544, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2948, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2948, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1536652944993	geckodriver	INFO	geckodriver 0.20.1
+1536652945001	geckodriver	INFO	Listening on 127.0.0.1:58690
+1536652945522	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.b5wDPtRH0K3i"
+1536652949133	Marionette	INFO	Listening on port 58695
+1536652949412	Marionette	WARN	TLS certificate errors will be ignored for this session
+1536652949448	Marionette	DEBUG	[6442450945] Frame script loaded
+1536652949454	Marionette	DEBUG	[6442450945] Frame script registered
+1536652949474	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1536652949626	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1536652949949	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://test.dr.xywy.com/site/login
+1536652950104	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://test.dr.xywy.com/site/login
+1536652950404	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for http://test.dr.xywy.com/site/login
+1536652951015	Marionette	DEBUG	[6442450945] Received DOM event pagehide for http://test.dr.xywy.com/site/login
+1536652951017	Marionette	DEBUG	[6442450945] Received DOM event unload for http://test.dr.xywy.com/site/login
+1536652951566	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for http://test.dr.xywy.com/
+1536652951730	Marionette	DEBUG	[6442450945] Received DOM event pageshow for http://test.dr.xywy.com/
+1536652953787	Marionette	DEBUG	[6442450950] Frame script loaded
+1536652953827	Marionette	DEBUG	[6442450950] Frame script registered
+1536652953851	Marionette	DEBUG	[6442450953] Frame script loaded
+1536652953861	Marionette	DEBUG	[6442450953] Frame script registered
+1536652954929	Marionette	DEBUG	[6442450956] Frame script loaded
+1536652954938	Marionette	DEBUG	[6442450956] Frame script registered
+1536652961766	Marionette	DEBUG	[6442450956] Canceled page load listener because no navigation has been detected
+1536652963033	Marionette	DEBUG	[6442450956] Canceled page load listener because no navigation has been detected
+1536652963255	Marionette	DEBUG	[6442450956] Canceled page load listener because no navigation has been detected
+1536652968753	Marionette	DEBUG	[6442450956] Canceled page load listener because no navigation has been detected
+1536652974762	Marionette	DEBUG	[6442450956] Canceled page load listener because no navigation has been detected
+1536652980055	Marionette	DEBUG	[6442450956] Canceled page load listener because no navigation has been detected
+1536652981323	Marionette	DEBUG	[6442450956] Canceled page load listener because no navigation has been detected
+1536653044891	addons.productaddons	ERROR	Request failed certificate checks: [Exception... "Certificate checks failed. See previous errors for details."  nsresult: "0x80070057 (NS_ERROR_ILLEGAL_VALUE)"  location: "JS frame :: resource://gre/modules/CertUtils.jsm :: validateCert :: line 109"  data: no]
+1536653337898	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1536653338032	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1536653338033	addons.xpi	ERROR	Failed to download system add-on gmp-widevinecdm: Error: Failed downloading via XHR, status: 0, reason: error (resource://gre/modules/addons/ProductAddonChecker.jsm:314:16) JS Stack trace: fail@ProductAddonChecker.jsm:314:16
+1536653338046	addons.xpi	ERROR	Failed to download system add-on gmp-gmpopenh264: Error: File C:\Users\ADMINI~1\AppData\Local\Temp\tmpaddon-f4f49b does not contain a valid manifest (resource://gre/modules/addons/XPIInstall.jsm:802:11) JS Stack trace: loadManifest@XPIInstall.jsm:802:11
+1536653338047	addons.manager	WARN	Failed to update system addons: Error: Rejecting updated system add-on set that either could not be downloaded or contained unusable add-ons. (resource://gre/modules/addons/XPIInstall.jsm:3645:13) JS Stack trace: updateSystemAddons@XPIInstall.jsm:3645:13
+[Child 4196, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4196, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 5364, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3400, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3400, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2596, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1536653845857	Marionette	INFO	Stopped listening on port 58695
