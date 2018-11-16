@@ -38,12 +38,12 @@ class Im_Test():
 			if result == False:
 				return
 			sleep(1)
+			#更改问题状态，根据问题是否为指定请求不同接口
 			if q_type == 3:
 				qid = int(self.my_ask.get_id(user_id, zd=1, did=did))
 			else:
 				qid = int(self.my_ask.get_id(user_id))
-			print(qid)
-			self.my_doctor.take_question(qid)
+				self.my_doctor.take_question(qid)
 			if times <= 1:
 				self.my_doctor.answer_question(qid, is_summary)
 			elif 1 < times < 21:
@@ -51,7 +51,7 @@ class Im_Test():
 				for i in range(times-1):
 					self.my_ask.persue(qid, source, user_id)
 					sleep(1)
-					self.my_doctor.answer_ques_20(qid, i+2)
+					self.my_doctor.answer_ques_20(i+2)
 					sleep(1)
 			else:
 				print('times输入错误')
@@ -161,7 +161,10 @@ if __name__ == '__main__':
 
 								my_ask.other_page(source, uid=456654, q_type=m_q_type, doctor_ids=doctor_id, pay_type=1)
 								sleep(1)
-								qid = my_ask.get_id(456654)
+								if m_q_type == 3:
+									qid = my_ask.get_id(456654,zd=1,did=doctor_id)
+								else:
+									qid = my_ask.get_id(456654)
 								print('本次提问的qid为%d'%qid)
 
 							else:

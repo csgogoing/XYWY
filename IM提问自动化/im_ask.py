@@ -41,7 +41,7 @@ class Ask(object):
 		qid = int(qids[0])
 		#置问题状态
 		if did:
-			request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d&zd=1&%d' %qid,did)
+			request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d&zd=1&did=%d' %(qid,did))
 		else:
 			request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d' %qid)
 
@@ -190,8 +190,8 @@ if __name__ == '__main__':
 	#测试运行
 	A = Ask()
 	#A.baidu_page(2, user_id=456654)
-	#K = A.persue(1541137746	, 200002, 456654)
+	K = A.persue(14366, 'xywyapp', 456654)
 	#print(K)
 	#if 'Success!' in K:
 	#	print(1)
-	A.other_page('xiaomi')
+	#A.other_page('xiaomi')
