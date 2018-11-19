@@ -3152,3 +3152,196 @@ console.error: BroadcastService:
  6852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 [Child 6852, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 1542361049449	Marionette	INFO	Stopped listening on port 59380
+1542595369624	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.8sJGi99x1nrw"
+1542595374030	Marionette	INFO	Listening on port 51199
+1542595374224	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 2748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6748, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 6916, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6916, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1542595582432	Marionette	INFO	Stopped listening on port 51199
+1542595728435	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.XRGZtSOPztiT"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542595731849	Marionette	INFO	Listening on port 51681
+1542595732286	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:721:13
+
+1542595986939	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.dkMeNawORn0p"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542595991746	Marionette	INFO	Listening on port 52058
+1542595991853	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:721:13
+
+1542596319243	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.YG5L8MgaFaXA"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542596323337	Marionette	INFO	Listening on port 52323
+1542596323549	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:721:13
+
+[Parent 5932, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6768, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542596461315	Marionette	INFO	Listening on port 52589
+1542596461444	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x190091,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x190084,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x190091,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x190084,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x190091,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x190084,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 5940, Gecko_IOThread] WARNING: file z:/build/build/src/ipc/chromium/src/base/process_util_win.cc, line 188
+[Child 5872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"Extension shutdown: formautofill@mozilla.org","state":{"state":"Startup: Run manifest"},"filename":"resource://gre/modules/addons/XPIProvider.jsm","lineNumber":2211,"stack":["resource://gre/modules/addons/XPIProvider.jsm:startup/<:2211","resource://gre/modules/AsyncShutdown.jsm:observe:541","resource:///modules/ContentCrashHandlers.jsm:observe:152"]}] Barrier: profile-change-teardown
+1542612738530	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.Gbu0FD7fIOUs"
+1542612747304	Marionette	INFO	Listening on port 60169
+1542612747657	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542612826910	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.j9VgCSQCqjbS"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542612831060	Marionette	INFO	Listening on port 60418
+1542612831246	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:721:13
+
+[Child 3996, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 4964, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4120, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 4964, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4644, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4644, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1542613928653	Marionette	INFO	Stopped listening on port 60418
+1542614896021	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.omXXGnTSRJUv"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542614901473	Marionette	INFO	Listening on port 61754
+1542614901550	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 4132, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4132, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4672, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4672, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4700, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4700, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1542615144669	Marionette	INFO	Stopped listening on port 61754
+1542615157678	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.e5jfam1Zx3bz"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542615161624	Marionette	INFO	Listening on port 62268
+1542615162045	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:721:13
+
+1542615853437	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.qxS1J0jO3LIv"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542615857568	Marionette	INFO	Listening on port 62897
+1542615857772	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:721:13
+
+[Parent 4904, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7000, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 4904, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 256, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 256, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 4904, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1542616559392	Marionette	INFO	Stopped listening on port 62897
+ipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1542616230888	Marionette	INFO	Stopped listening on port 63331
+1542616245080	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.XMIlVGrIln1u"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542616249767	Marionette	INFO	Listening on port 64250
+1542616249997	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 4984, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 4984, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5244, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5244, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 4128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3680, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3680, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1542616345593	Marionette	INFO	Stopped listening on port 64250
+1542616350109	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.ycqO6Rsj3sEB"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542616354328	Marionette	INFO	Listening on port 64715
+1542616354414	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:721:13
+
+[Child 2512, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7276, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7276, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 8076, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6668, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1542616560500	Marionette	INFO	Stopped listening on port 64715
+1542616662214	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.V0LZINOfTNMy"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1542616666845	Marionette	INFO	Listening on port 65243
+1542616667124	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 6744, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6744, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7000, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 7000, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 7768, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3800, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 3800, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1542616774935	Marionette	INFO	Stopped listening on port 65243

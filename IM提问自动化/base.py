@@ -36,7 +36,6 @@ class Page(object):
 						else:
 							break
 					sys.exit('无法调起浏览器，请联系管理员')
-					print('调起浏览器成功')
 			else:
 				break
 

@@ -17,7 +17,6 @@ class login(Page):
 
 	def login_doctor(self, did=117333219):
 		#登陆医生端
-		print('成功登陆医生端')
 		self.driver.get("http://test.dr.xywy.com/site/login")
 		self.driver.find_element_by_name('userlogin').send_keys('admin')
 		self.driver.find_element_by_name('password').send_keys('123456')
@@ -44,6 +43,8 @@ class login(Page):
 	def take_question(self, qid):
 		#问题库抢题
 		#点击第1个问题
+		if type(qid) != int:
+			return
 		handles = self.driver.window_handles
 		self.driver.switch_to_window(handles[0])
 		while True:
@@ -68,6 +69,8 @@ class login(Page):
 	def answer_question(self, qid, is_summary):
 		handles = self.driver.window_handles
 		self.driver.switch_to_window(handles[0])
+		sleep(1)
+		self.driver.refresh()
 		#点击处理中
 		self.driver.find_element_by_xpath('//*[@class="message-status pr fYaHei clearfix"]/div[1]')
 		self.Load_button()

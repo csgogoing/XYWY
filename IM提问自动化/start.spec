@@ -3,8 +3,8 @@
 block_cipher = None
 
 
-a = Analysis(['E:\\Mine\\Program\\XYWY_IM_auto_demo\\start.py'],
-             pathex=['E:\\Mine\\Program\\XYWY_IM_auto_demo'],
+a = Analysis(['D:\\my_program\\XYWY_IM_auto\\start.py'],
+             pathex=['D:\\my_program\\XYWY_IM_auto'],
              binaries=[],
              datas=[],
              hiddenimports=[],
