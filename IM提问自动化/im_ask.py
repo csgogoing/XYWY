@@ -98,10 +98,13 @@ class Ask(object):
 		try:
 			page = request.urlopen(req).read()
 			page = page.decode('utf-8')
-		except BaseException as e:
-			print(e.code())
-			print(e.read()).devode('utf-8')
-		return page
+		except:
+			print('请检查环境绑定及网络连接')
+			return(False)
+		if 'Success!' in page:
+			return(True)
+		else:
+			return(False)
 
 	def baidu_page(self, q_type, user_id=456654, doctor_ids=117333219, pay_amount=300, firset_dep='内科', second_dep='呼吸内科', content=''):
 		#百度来源提问—
@@ -153,12 +156,12 @@ class Ask(object):
 		try:
 			page = request.urlopen(req).read()
 			page = page.decode('utf-8')
-		except BaseException as e:
-			print(e.code())
-			print(e.read()).devode('utf-8')
+		except:
+			print('请检查环境绑定及网络连接')
+			return(False, None)
 		if 'Success!' in page:
 			print('百度问题提问成功')
-			return (True, self.now_time)
+			return(True, self.now_time)
 		else:
 			print('百度提问失败, 请重试或手动尝试')
 			return(False, self.now_time)
@@ -201,12 +204,12 @@ class Ask(object):
 		try:
 			page = request.urlopen(req).read()
 			page = page.decode('utf-8')
-		except BaseException as e:
-			print(e.code())
-			print(e.read()).devode('utf-8')
+		except:
+			print('请检查环境绑定及网络连接')
+			return(False, None)
 		if 'Success!' in page:
 			print('%s来源问题提问成功'%resource_id)
-			return (True, self.now_time)
+			return(True, self.now_time)
 		else:
 			print('%s提问失败, 请重试或手动尝试'%resource_id)
 			return(False, self.now_time)
@@ -264,12 +267,12 @@ class Ask(object):
 		try:
 			page = request.urlopen(req).read()
 			page = page.decode('utf-8')
-		except BaseException as e:
-			print(e.code())
-			print(e.read()).devode('utf-8')
+		except:
+			print('请检查环境绑定及网络连接')
+			return(False, None)
 		if 'Success!' in page:
 			print('搜狗问题提问成功')
-			return (True, self.now_time)
+			return(True, self.now_time)
 		else:
 			print('搜狗提问失败, 请重试或手动尝试')
 			return(False, self.now_time)

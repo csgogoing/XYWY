@@ -160,15 +160,21 @@ if __name__ == '__main__':
 							print('本次提问的userid为%d'%user_random)
 							if m_source == 1:
 								source = 200002
-								my_ask.baidu_page(m_q_type, user_id=user_random, doctor_ids=doctor_id, pay_amount=300, firset_dep='内科', second_dep='呼吸内科')
-								qid = my_ask.get_id(user_random)
-								print('本次提问的qid为%d'%qid)
+								result,order_id = my_ask.baidu_page(m_q_type, user_id=user_random, doctor_ids=doctor_id, pay_amount=300, firset_dep='内科', second_dep='呼吸内科')
+								if result == True:
+									qid = my_ask.get_id(user_random)
+									print('本次提问的qid为%d'%qid)
+								else:
+									print('提问失败')
 
 							elif m_source == 7:
 								source = 'sgjk'
-								my_ask.sougou_page(m_q_type, user_id=user_random, doctor_ids=doctor_id, pay_amount=300)
-								qid = my_ask.get_id(user_random)
-								print('本次提问的qid为%d'%qid)
+								result,order_id = my_ask.sougou_page(m_q_type, user_id=user_random, doctor_ids=doctor_id, pay_amount=300)
+								if result == True:
+									qid = my_ask.get_id(user_random)
+									print('本次提问的qid为%d'%qid)
+								else:
+									print('提问失败')
 
 							elif m_source in (2,3,4,5,6):
 								if m_source == 2:
@@ -181,14 +187,16 @@ if __name__ == '__main__':
 									source = "hlwyy"
 								elif m_source == 6:
 									source = "ywb"
-								my_ask.other_page(source, user_id=user_random, q_type=m_q_type, doctor_ids=doctor_id, pay_type=1)
-								sleep(1)
-								if m_q_type == 3:
-									qid = my_ask.get_id(user_random,zd=1,did=doctor_id)
+								result,order_id = my_ask.other_page(source, user_id=user_random, q_type=m_q_type, doctor_ids=doctor_id, pay_type=1)
+								if result == True:
+									sleep(1)
+									if m_q_type == 3:
+										qid = my_ask.get_id(user_random,zd=1,did=doctor_id)
+									else:
+										qid = my_ask.get_id(user_random)
+									print('本次提问的qid为%d'%qid)
 								else:
-									qid = my_ask.get_id(user_random)
-								print('本次提问的qid为%d'%qid)
-
+									print('提问失败')
 							else:
 								print('返回上一级菜单')
 								break
@@ -489,7 +497,10 @@ if __name__ == '__main__':
 					except:
 						sys.exit('感谢使用')
 					else:
-						my_ask.persue(qid, resource_id, user_id)
-						print('%s追问成功'%resource_id)
+						result = my_ask.persue(qid, resource_id, user_id)
+						if result == True:
+							print('%s来源追问成功'%resource_id)
+						else:
+							print('追问失败')
 				else:
 					sys.exit('感谢使用')

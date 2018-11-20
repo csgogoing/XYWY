@@ -1,6 +1,7 @@
 #coding=utf-8
 from selenium import webdriver
 import sys
+import requests
 
 class Page(object):
 	'''
@@ -11,6 +12,11 @@ class Page(object):
 
 	def __init__(self):
 		#初始化
+		try:
+			url = 'http://test.dr.xywy.com/site/login'
+			req = requests.get(url)
+		except:
+			sys.exit('请检查环境绑定及网络连接后重启程序')
 		retry = 1
 		while retry < 4:
 			try:
