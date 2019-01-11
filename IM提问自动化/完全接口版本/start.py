@@ -35,6 +35,7 @@ class Im_Test():
 				raise Exception('获取问题ID失败')
 			else:
 				print('本次提问的qid为%d' %qid)
+			self.my_ask.persue(order_id, source, uid, 1, self.did)
 			if times == 0:
 				return qid
 			elif 0 < times < 21:
@@ -51,7 +52,7 @@ class Im_Test():
 					raise Exception('写总结失败，qid=%d'%qid)
 				for i in range(times-1):
 					#根据用户输入的提问次数执行自动化
-					self.my_ask.persue(order_id, source, uid, self.did)
+					self.my_ask.persue(order_id, source, uid, i+2, self.did)
 					sleep(1)
 					self.my_doctor.reply(i+2)
 					sleep(1)
@@ -70,6 +71,7 @@ class Im_Test():
 			else:
 				qid = int(qid)
 				print('本次提问的qid为%d' %qid)
+			self.my_ask.persue(order_id, source, uid, 1, self.did)
 			if times == 0:
 				return qid
 			elif 0 < times < 21:
@@ -86,7 +88,7 @@ class Im_Test():
 					raise Exception('写总结失败，qid=%d'%qid)
 				for i in range(times-1):
 					#根据用户输入的提问次数执行自动化
-					self.my_ask.persue(order_id, source, uid, self.did)
+					self.my_ask.persue(order_id, source, uid, i+2, self.did)
 					sleep(1)
 					self.my_doctor.reply(i+2)
 					sleep(1)
@@ -94,7 +96,7 @@ class Im_Test():
 				raise Exception('问答轮次不得超过20')
 
 		elif source == 'ywb':
-			#其他来源提问
+			#英威诺来源
 			result, order_id = self.my_ask.other_page(resource_id=source, user_id=user_id, q_type=q_type, pay_amount=pay_amount, doctor_ids=doc_id, pay_type=1, content = content)
 			if result == False:
 				raise Exception('提问失败')
@@ -107,6 +109,7 @@ class Im_Test():
 			else:
 				qid = int(qid)
 				print('本次提问的qid为%d' %qid)
+			self.my_ask.persue(qid, source, uid, 1, self.did)
 			if times == 0:
 				return qid
 			elif 0 < times < 21:
@@ -123,7 +126,7 @@ class Im_Test():
 					raise Exception('写总结失败，qid=%d'%qid)
 				for i in range(times-1):
 					#根据用户输入的提问次数执行自动化
-					self.my_ask.persue(qid, source, uid, self.did)
+					self.my_ask.persue(qid, source, uid, i+2, self.did)
 					sleep(1)
 					self.my_doctor.reply(i+2)
 					sleep(1)
@@ -147,6 +150,7 @@ class Im_Test():
 			else:
 				qid = int(qid)
 				print('本次提问的qid为%d' %qid)
+			self.my_ask.persue(qid, source, uid, 1, self.did)
 			if times == 0:
 				return qid
 			elif 0 < times < 21:
@@ -163,14 +167,14 @@ class Im_Test():
 					raise Exception('写总结失败，qid=%d'%qid)
 				for i in range(times-1):
 					#根据用户输入的提问次数执行自动化
-					self.my_ask.persue(qid, source, uid, self.did)
+					self.my_ask.persue(qid, source, uid, i+2, self.did)
 					sleep(1)
 					self.my_doctor.reply(i+2)
 					sleep(1)
 			else:
 				raise Exception('问答轮次不得超过20')
 
-		print("-------------------------测试通过-------------------------")
+		print("-------------------------本条用例测试通过-------------------------")
 		return qid
 
 
@@ -244,7 +248,7 @@ if __name__ == '__main__':
 							if m_source == 1:
 								source = 200002
 								result,order_id = my_ask.baidu_page(m_q_type, user_id=user_random, doctor_ids=doctor_id, pay_amount=300, firset_dep='内科', second_dep='呼吸内科')
-								qid = my_ask.get_id(order_id=order_id)
+								qid,uid = my_ask.get_id(order_id=order_id)
 								if qid == None:
 									pass
 								else:
@@ -253,7 +257,7 @@ if __name__ == '__main__':
 							elif m_source == 7:
 								source = 'sgjk'
 								result,order_id = my_ask.sougou_page(m_q_type, user_id=user_random, doctor_ids=doctor_id, pay_amount=300)
-								qid = my_ask.get_id(order_id=order_id)
+								qid,uid = my_ask.get_id(order_id=order_id)
 								if qid == None:
 									pass
 								else:
@@ -272,9 +276,9 @@ if __name__ == '__main__':
 									source = "ywb"
 								result,order_id = my_ask.other_page(source, user_id=user_random, q_type=m_q_type, doctor_ids=doctor_id, pay_type=1)
 								if m_q_type == 3:
-									qid = my_ask.get_id(user_id=user_random,zd=1,did=doctor_id)
+									qid,uid = my_ask.get_id(user_id=user_random,zd=1,did=doctor_id)
 								else:
-									qid = my_ask.get_id(user_id=user_random)
+									qid,uid = my_ask.get_id(user_id=user_random)
 								if qid == None:
 									pass
 								else:
@@ -334,7 +338,7 @@ if __name__ == '__main__':
 						print('返回主菜单')
 						break
 					else:
-						result = my_ask.persue(qid, resource_id, user_id)
+						result = my_ask.persue(qid, resource_id, user_id, 0)
 						if result == True:
 							print('%s来源追问成功'%resource_id)
 						else:
@@ -470,7 +474,7 @@ if __name__ == '__main__':
 								qid = test_auto.run_test(source=t_source,q_type=t_q_type,pay_amount=t_pay_amount,pay_type=t_pay_type,times=t_times,firset_dep=t_firset_dep,second_dep=t_second_dep,is_summary=t_is_summary,user_id=t_user_id,content=t_content, doc_id=t_did)
 							except Exception as e:
 								print(e)
-								print("-------------------------未通过-------------------------")
+								print("-------------------------本条用例未通过-------------------------")
 								wrt.conclude(row,name_source,name_type,0,result=e)
 							else:
 								wrt.conclude(row,name_source,name_type,qid)

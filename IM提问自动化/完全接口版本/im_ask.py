@@ -43,36 +43,43 @@ class Ask(object):
 
 	def get_id(self, user_id=None, order_id=None, zd=None, did=None):
 		self.im_login()
+		url = "http://test.admin.d.xywy.com/question/default/index"
 		if user_id:
-			url="http://test.admin.d.xywy.com/question/default/index?QuestionBaseSearch[keyword_type]=uid&QuestionBaseSearch[keyword]=%d"%user_id
+			data = {
+				'QuestionBaseSearch[keyword_type]' : 'uid',
+				'QuestionBaseSearch[keyword]' : '%d'%user_id
+				}
 		elif order_id:
-			url="http://test.admin.d.xywy.com/question/default/index?QuestionBaseSearch[keyword_type]=cqid&QuestionBaseSearch[keyword]=%d"%order_id
+			data = {
+				'QuestionBaseSearch[keyword_type]' : 'cqid',
+				'QuestionBaseSearch[keyword]' : '%d'%order_id
+				}
 		else:
 			print('获取问题ID参数无效')
 			return None
 		#获取问题ID
 		while True:
 			try:
-				request_qid = requests.get(url,cookies=self.im_cookies)
+				request_qid = requests.get(url, params=data, cookies=self.im_cookies)
 				if request_qid.status_code != 200:
 					print(request_qid.status_code)
 					raise Exception
 			except:
-				print('请检查')
+				print('请检查网络环境！')
 				sleep(2)
 				sys.exit()
 			elements = etree.HTML(request_qid.text)
 			try:
-				qids = elements.xpath('//tbody/tr[1]/td[1]/text()')[0]
+				qids = elements.xpath('//tbody/tr[1]/td[2]/text()')[0]
 				qid = int(qids)
 				#置问题状态
 				if did:
 					request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d&zd=1&did=%d' %(qid,did))
 				else:
 					request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d' %qid)
-				status = elements.xpath('//tbody/tr[1]/td[17]/text()')[0]
+				status = elements.xpath('//tbody/tr[1]/td[18]/text()')[0]
 				if status == '问题库' or status == '医生认领':
-					uid = int(elements.xpath('//tbody/tr[1]/td[3]/a/text()')[0])
+					uid = int(elements.xpath('//tbody/tr[1]/td[4]/a/text()')[0])
 					return qid,uid
 				else:
 					sleep(2)
@@ -109,7 +116,7 @@ class Ask(object):
 	def check(self, qid, times, is_summary):
 		url = 'http://test.admin.d.xywy.com/question/default/view?id=%s' %qid
 
-	def persue(self, qid, resource_id, user_id, did=None):
+	def persue(self, qid, resource_id, user_id, times, did=None):
 		#追问接口
 		headers = {
 				'Connection': 'keep-alive',
@@ -122,9 +129,9 @@ class Ask(object):
 				'resource_id': resource_id,
 				'user_id': user_id,
 				#'expert_id': '68258667',
-				'content': '{"type":"text","text":"患者追问内容%d"}'%(self.msg_id_origin),
-				'msg_id': '%s' %(int(time.time())),
-				'atime': '%s' %(int(time.time())),
+				'content': '{"type":"text","text":"患者追问内容%d"}'%times,
+				'msg_id': '%s' %(int(time.time()*1000)),
+				'atime': '%s' %(int(time.time()*1000)),
 			}
 
 		elif resource_id == 'sgjk':
@@ -135,9 +142,9 @@ class Ask(object):
 				'source_key': 'sgjk',
 				'user_id': user_id,
 				#'expert_id': '117333219',
-				'content': '[{"type":"text","text":"患者追问内容%d"}]'%(self.msg_id_origin),
-				'msg_id': '%s' %(int(time.time())),
-				'atime': '%s' %(int(time.time())),
+				'content': '[{"type":"text","text":"患者追问内容%d"}]'%times,
+				'msg_id': '%s' %(int(time.time()*1000)),
+				'atime': '%s' %(int(time.time()*1000)),
 			}
 		else:
 			url = 'http://test.api.d.xywy.com/user/question/add?safe_source_tag_wws=DJWE23_oresdf@ads'
@@ -146,9 +153,9 @@ class Ask(object):
 				'source': resource_id,
 				'uid': user_id,
 				#'expert_id': '117333219',
-				'content': '{"type":"text","text":"患者追问内容%d"}'%(self.msg_id_origin),
-				'msg_id': '%s' %(int(time.time())),
-				'atime': '%s' %(int(time.time())),
+				'content': '{"type":"text","text":"患者追问内容%d"}'%times,
+				'msg_id': '%s' %(int(time.time()*1000)),
+				'atime': '%s' %(int(time.time()*1000)),
 			}
 
 		self.msg_id_origin = self.msg_id_origin + 1
@@ -340,9 +347,9 @@ class Ask(object):
 if __name__ == '__main__':
 	#测试运行
 	A = Ask()
-	print(A.get_id(user_id=117333661))
+	#print(A.get_id(user_id=987312))
 	#print(A.baidu_page(2, user_id=117333661))
-	#K = print(A.persue(15660, 'ywb', 666667))
+	K = print(A.persue(16082, 'unionpay', 117333736, 20))
 	#print(K)
 	#if 'Success!' in K:
 	#	print(1)
