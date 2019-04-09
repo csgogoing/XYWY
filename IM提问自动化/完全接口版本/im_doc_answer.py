@@ -22,9 +22,8 @@ class login():
 		self.headers = {
 		"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
 		}
-		self.reqs = requests.Session()
 		try:
-			req = self.reqs.get(url_login)
+			req=requests.get(url_login)
 			if req.status_code != 200:
 				raise Exception
 		except:
@@ -32,6 +31,7 @@ class login():
 			sleep(2)
 			sys.exit()
 		m_value = re.findall(r'f" value="(.*)">', req.text)
+		self.dr_cookies = req.cookies.get_dict()
 		#帐号密码
 		data = {
 		"_csrf":m_value,
@@ -39,22 +39,22 @@ class login():
 		"password":"123456",
 		}
 		#注册_csrf
-		req_login = self.reqs.get(url_login, headers=self.headers, data=data)
+		req_login = requests.get(url_login, headers=self.headers, data=data, cookies=self.dr_cookies)
 		#医生库查找医生获取info
-		req_login_doc = self.reqs.get(url_login_doc, headers=self.headers)
+		req_login_doc = requests.get(url_login_doc, headers=self.headers, cookies=self.dr_cookies)
 		info = re.findall(r'info:(\d{6})', req_login_doc.text)
 		#登录医生主页，注意cookie持久化问题
 		url_doc = 'http://test.dr.xywy.com/account/pc-login?id=%s&user_id=%d'%(info[0],did)
-		dr_doc = self.reqs.get(url_doc, headers=self.headers)
+		dr_doc = requests.get(url_doc, headers=self.headers, cookies=self.dr_cookies)
 		self.dr_doc_cookies = dr_doc.cookies.get_dict()
 		#登录IM平台并获取cookie
-		doc_im = self.reqs.get(url_doc_im, headers=self.headers)
+		doc_im = requests.get(url_doc_im, headers=self.headers, cookies=self.dr_doc_cookies)
 		self.doc_im_cookies = dr_doc.cookies.get_dict()
 
 	def question_pool(self, check_qid):
 		qids = []
 		url_q_pool = 'http://test.d.xywy.com/api-doctor/quesion-pool?page=1'
-		q_pool = self.reqs.get(url_q_pool, headers=self.headers)
+		q_pool = requests.get(url_q_pool, headers=self.headers, cookies=self.doc_im_cookies)
 		num = json.loads(q_pool.text)['data']['total']
 		if num//15 == 0:
 			for i in json.loads(q_pool.text)['data']['list']:
@@ -64,7 +64,7 @@ class login():
 				qids.append(i['qid'])
 			for j in range(1, num//15+1):
 				url_q_pool = 'http://test.d.xywy.com/api-doctor/quesion-pool?page=%d'%(j+1)
-				q_pool = self.reqs.get(url_q_pool, headers=self.headers)
+				q_pool = requests.get(url_q_pool, headers=self.headers, cookies=self.doc_im_cookies)
 				for i in json.loads(q_pool.text)['data']['list']:
 					qids.append(i['qid'])
 		if str(check_qid) in qids:
@@ -75,7 +75,7 @@ class login():
 	def take_question(self, qid):
 		#问题库抢题
 		url_rob = 'http://test.d.xywy.com/api-doctor/rob-question?qid=%d'%qid
-		rob_qid = self.reqs.get(url_rob, headers=self.headers)
+		rob_qid = requests.get(url_rob, headers=self.headers, cookies=self.doc_im_cookies)
 		code = json.loads(rob_qid.text)["code"]
 		if code == 10000:
 			return True
@@ -120,7 +120,7 @@ class login():
 						count+=1
 				sleep(5)
 				while True:
-					req_summary = self.reqs.post(url_summary, headers=self.headers, data=data)
+					req_summary = requests.post(url_summary, headers=self.headers, data=data, cookies=self.doc_im_cookies)
 					code = json.loads(req_summary.text)["code"]
 					if code == 10000:
 						print('写总结')
@@ -150,8 +150,8 @@ class login():
 		self.trecv.wait()
 
 if __name__ == '__main__':
-	A = login(68258667)
-	print(A.take_question(16288))
+	A = login(117333443)
+	#print(A.take_question(15541))
 	#print(A.answer_question(15600,117333637,1))
 	#A.reply(3)
-	#print(A.question_pool(16288))
+	print(A.question_pool(15814))

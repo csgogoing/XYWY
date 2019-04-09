@@ -7,6 +7,7 @@ import requests
 import re
 import sys
 import json
+import random
 
 class Ask(object):
 	'''
@@ -41,7 +42,7 @@ class Ask(object):
 			return
 		self.im_cookies=req_login.cookies.get_dict()
 
-	def get_id(self, user_id=None, order_id=None, zd=None, did=None):
+	def get_id(self, user_id=None, order_id=None, zd=None, did=0):
 		self.im_login()
 		url = "http://test.admin.d.xywy.com/question/default/index"
 		if user_id:
@@ -72,11 +73,21 @@ class Ask(object):
 			try:
 				qids = elements.xpath('//tbody/tr[1]/td[2]/text()')[0]
 				qid = int(qids)
-				#置问题状态
-				if did:
-					request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d&zd=1&did=%d' %(qid,did))
+				free = elements.xpath('//tbody/tr[1]/td[8]/text()')[0]
+				if str(free) == '免费咨询':
+					is_free = 1
 				else:
+					is_free = 0
+				#设置问题支付状态为已支付
+				if did!=0 & is_free==0:
+					print('指定')
+					request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d&zd=1&did=%d' %(qid,did))
+				elif did==0 & is_free==0:
+					print('悬赏')
 					request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d' %qid)
+				else:
+					print('pass')
+					pass
 				status = elements.xpath('//tbody/tr[1]/td[18]/text()')[0]
 				if status == '问题库' or status == '医生认领':
 					uid = int(elements.xpath('//tbody/tr[1]/td[4]/a/text()')[0])
@@ -84,7 +95,7 @@ class Ask(object):
 				else:
 					sleep(2)
 					continue
-			except:
+			except Exception as e:
 				sleep(1)
 		print('获取问题ID失败')
 		return None,None
@@ -98,13 +109,20 @@ class Ask(object):
 		except:
 			sys.exit('请检查环境绑定及网络')
 		html = etree.HTML(request_qid.text)
-		table=html.xpath('//tbody/tr/td/a/text()')
-		docid = int(table[1])
+		docid_table=html.xpath('//tbody/tr/td/a/text()')
+		docid = int(docid_table[1])
+		is_free = elements.xpath('//tbody/tr[1]/td[8]/text()')[0]
+		if is_free == '免费咨询':
+			is_free = 1
+		else:
+			is_free = 0
 		try:
-			if docid == 0:
+			if docid == 0 & is_free!=1:
 				result = request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d' %pay_qid).read()
-			else:
+			elif is_free!=1:
 				result = request.urlopen('http://test.admin.d.xywy.com/site/question-order-pay-status?qid=%d&zd=1&did=%d' %(pay_qid,docid)).read()
+			else:
+				pass
 		except:
 			return False
 		else:
@@ -176,7 +194,7 @@ class Ask(object):
 			return False
 
 
-	def baidu_page(self, q_type, user_id=456654, doctor_ids=117333219, pay_amount=300, firset_dep='内科', second_dep='呼吸内科', content=''):
+	def baidu_page(self, q_type, user_id=456654, doctor_ids='', pay_amount=300, firset_dep='内科', second_dep='呼吸内科', content=''):
 		#百度来源提问
 		if q_type == 1:
 			type_name = '免费'
@@ -188,7 +206,7 @@ class Ask(object):
 			print('提问类型错误')
 			return(False, None)
 		url = 'http://test.d.xywy.com/socket/question'
-		self.now_time = int(time.time())
+		self.now_time = int(time.time()*1000)
 		headers = {
 			'Connection': 'keep-alive',
 			'Content-Type': 'application/x-www-form-urlencoded'
@@ -238,7 +256,7 @@ class Ask(object):
 	def other_page(self, resource_id, user_id=456654, q_type=2, pay_amount=300, doctor_ids='', pay_type=1, content=''):
 		#其他来源提问
 		url = 'http://test.api.d.xywy.com/user/question/ask?safe_source_tag_wws=DJWE23_oresdf@ads'
-		self.now_time = int(time.time())
+		self.now_time = int(time.time()*1000)
 		headers = {
 			'Connection': 'keep-alive',
 			'Content-Type': 'application/x-www-form-urlencoded'
@@ -296,7 +314,7 @@ class Ask(object):
 		else:
 			print('提问类型错误')
 			return(False, None)
-		self.now_time = int(time.time())
+		self.now_time = int(time.time()*1000)
 		headers = {
 			'Connection': 'keep-alive',
 			'Content-Type': 'application/x-www-form-urlencoded'
@@ -347,9 +365,13 @@ class Ask(object):
 if __name__ == '__main__':
 	#测试运行
 	A = Ask()
-	#print(A.get_id(user_id=987312))
-	#print(A.baidu_page(2, user_id=117333661))
-	K = print(A.persue(16082, 'unionpay', 117333736, 20))
+	#print(A.get_id(order_id=1553842827))
+	for i in range(10):
+		user_random = random.randint(9999,999999)
+		print(A.baidu_page(1, user_id=user_random))
+		user_random = random.randint(9999,999999)
+		print(A.baidu_page(2, user_id=user_random))
+	#K = print(A.persue(16082, 'unionpay', 117333736, 20))
 	#print(K)
 	#if 'Success!' in K:
 	#	print(1)

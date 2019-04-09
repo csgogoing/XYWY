@@ -3,7 +3,7 @@ from xlutils.copy import copy
 
 class write_result():
 	def __init__(self, file):
-		rb = xlrd.open_workbook(file)
+		rb = xlrd.open_workbook(file, formatting_info=True)
 		self.wb = copy(rb)
 		self.ws = self.wb.get_sheet(0)
 		self.ws.write(0, 10, '问题ID')
